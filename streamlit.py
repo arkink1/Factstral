@@ -9,6 +9,8 @@ claim = st.text_input("Enter the claim you want to fact check:")
 num_articles = st.number_input("Enter the number of sources to refer to:", min_value=1, step=1)
 uploaded_file = st.file_uploader("Upload an image or video", type=["jpg", "jpeg", "png", "mp4", "mov", "avi"])
 
+os.environ['BRAVE_API_KEY'] = ""
+os.environ['MISTRAL_API_KEY'] = ""
 brave_api_key = st.text_input("Enter your Brave API key:", type="password")
 mistral_api_key = st.text_input("Enter your Mistral API key:", type="password")
 if brave_api_key:
