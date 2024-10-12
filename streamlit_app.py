@@ -1,3 +1,6 @@
+brave_key = ""
+mistral_key = ""
+
 import streamlit as st
 from fact_checker import fact_check_fn, fact_check_fn_img, fact_check_fn_video
 import json
@@ -9,8 +12,6 @@ claim = st.text_input("Enter the claim you want to fact check:")
 num_articles = st.number_input("Enter the number of sources to refer to:", min_value=1, step=1)
 uploaded_file = st.file_uploader("Upload an image or video", type=["jpg", "jpeg", "png", "mp4", "mov", "avi"])
 
-brave_key = ""
-mistral_key = ""
 brave_api_key = st.text_input("Enter your Brave API key:", type="password")
 mistral_api_key = st.text_input("Enter your Mistral API key:", type="password")
 if brave_api_key:
