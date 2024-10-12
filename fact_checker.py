@@ -4,9 +4,10 @@ import requests
 import json
 import base64
 from video import get_transcription
+from streamlit_app import brave_key, mistral_key
 
-mistral_api_key = os.environ["MISTRAL_API_KEY"]
-brave_api_key = os.environ["BRAVE_API_KEY"]
+mistral_api_key = mistral_key
+brave_api_key = brave_key
 
 model = "pixtral-12b-2409"
 client = Mistral(api_key=mistral_api_key)
